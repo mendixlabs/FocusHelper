@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="FocusHelper.widget.FocusHelper" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>FocusHelper</name>
+    <description>A helper tool that can set the focus on a form-control triggered by logic such as a microflow, nanoflow or pageload.</description>
+
+    <icon>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsSAAALEgHS3X78AAAA2ElEQVRYhWP8//8/w0ACpgG1nYGBgQWZ47nxRwADA8MEBgYGeVpbvN2fgxHFAVDL19PaYnSAHAIgnzMo8TMyxKizMFhKMtPFAeA04LnxhwAs2OlpOdwByICeloMAPBt6bvwBZmz350BREBYWhteAVatWkW03iBhc2RAbQPYhLDQo8DUGGPAQGHXAqANGHTDqgFEHjDqAYG2IrT2ALEZpzTi02gO0ABghcPz5X5paiA6QHfAQRCy5+YeujkBulNK1YwLrGTEhCWxgYGAIhIUEvcAI7x0zMDAAAE29ObxoeE5LAAAAAElFTkSuQmCC</icon>
+
+    <properties>
+        <property key="targetName" type="string" required="true" defaultValue="">
+            <caption>Target formfield</caption>
+            <category>General</category>
+            <description>Enter the name of the formfield that needs to be receive focus.</description>
+        </property>
+        <property key="formContext" type="entity" required="true">
+             <caption>Form context object</caption>
+             <category>Data source</category>
+             <description>The context object that will be monitored.</description>
+        </property>
+        <property key="initializeFocusAttr" type="attribute" entityProperty="formContext" required="true">
+            <caption>Initialze attribute</caption>
+            <category>Data source</category>
+            <description>The boolean attribute that, if set to true will trigger the focus.</description>
+            <attributeTypes>
+                <attributeType name="Boolean" />
+            </attributeTypes>
+        </property>
+        <property key="mfAfterFocus" type="microflow" required="false" defaultValue="">
+            <caption>After focus microflow</caption>
+            <category>General</category>
+            <description>The optional microflow to trigger after focus has been set.</description>
+            <returnType type="Void" />
+        </property>
+    </properties>
+</widget>
+
