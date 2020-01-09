@@ -157,7 +157,7 @@ define([
         },
 
         // set the focus on the element
-        _setFocusOnInput(inputNode) { 
+        _setFocusOnInput: function(inputNode) { 
             inputNode.focus();
             this._setFocus = false;
 
