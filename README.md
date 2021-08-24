@@ -16,13 +16,19 @@ The custom widget is linked to the formfield you wish to add focus on when speci
 2. Add the custom widget after the formfield and enter the name of the formfield in its settings.
 3. Select the context object and it's attribute you want to trigger the focus on.
 4. Optionally add a microflow to trigger after the focus has been set.
-3. Run the project.
+5. Run the project.
 
 ## Notes
+
 The custom widget itself is a very simple widget but the behaviour with Mendix logic can make it a powerful tool. It just needs modeling some logic. E.g. adding focus on the message input field after clicking on the "add message" button.
 
 At the moment, the widget does check for a readonly state and if the formfield is in fact readonly, it will not trigger a focus on the formfield. However, this mechanism is not compatible with conditional editability - as it is not possible for the custom widget to detect the current state. This is not really a problem as the triggering of the focus event is not harmful in any way. However, if you did model more complex logic to be performed after the focus event, it might be good to check the readonly state in that microflow to avoid errors in business logic.
 
 ## Release Notes
-Appstore 1.0 release:
+
+Appstore 1.0.1 release:
+
+- Merge fixes from @tieniber
+- Verify working in Mendix 8.0 and 9.0
+  Appstore 1.0.0 release:
 - initial version of the widget
